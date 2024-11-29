@@ -7,8 +7,8 @@ resource "proxmox_vm_qemu" "ctl-plane" {
   target_node = var.pm_target_node
   vm_state    = "started"
   cpu_type    = "x86-64-v2"
-  cores       = 4
-  memory      = 4096
+  cores       = var.pm_ctl_vm_cpu_num
+  memory      = var.pm_ctl_vm_ram_size
   skip_ipv6   = true
 
   network {
@@ -43,8 +43,8 @@ resource "proxmox_vm_qemu" "workers" {
   target_node = var.pm_target_node
   vm_state    = "started"
   cpu_type    = "x86-64-v2"
-  cores       = 2
-  memory      = 2048
+  cores       = var.pm_worker_vm_cpu_num
+  memory      = var.pm_worker_vm_ram_size
   skip_ipv6   = true
 
   network {

@@ -31,6 +31,30 @@ variable "pm_worker_nodes_map" {
   description = "VM ID -> VM Name map of worker nodes"
 }
 
+variable pm_ctl_vm_cpu_num {
+  type = number
+  default = 4
+  description = "Number of vcpus dedicated to a controlplane VM"
+}
+
+variable pm_ctl_vm_ram_size {
+  type = number
+  default = 4096
+  description = "Amount of ram dedicated to a controlplane VM"
+}
+
+variable pm_worker_vm_cpu_num {
+  type = number
+  default = 2
+  description = "Number of vcpus dedicated to a worker VM"
+}
+
+variable pm_worker_vm_ram_size {
+  type = number
+  default = 2048
+  description = "Amount of ram dedicated to a worker VM"
+}
+
 variable "pm_storage_pool" {
   type    = string
   default = "local"

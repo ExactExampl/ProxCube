@@ -9,6 +9,14 @@
 
 # pm_worker_nodes_map = {id = "name"}
 
+# pm_ctl_vm_cpu_num = 4
+
+# pm_ctl_vm_ram_size = 4096
+
+# pm_worker_vm_cpu_num = 2
+
+# pm_worker_vm_ram_size = 2048
+
 # pm_storage_pool = "local"
 
 # pm_vm_disk_size = "40G"
