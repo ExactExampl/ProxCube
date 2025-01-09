@@ -12,8 +12,8 @@ resource "proxmox_vm_qemu" "ctl-plane" {
   skip_ipv6   = true
 
   network {
-    id = 0
-    model = "e1000"
+    id     = 0
+    model  = "e1000"
     bridge = var.pm_network_bridge
   }
 
@@ -21,13 +21,13 @@ resource "proxmox_vm_qemu" "ctl-plane" {
     scsi {
       scsi0 {
         disk {
-            storage = var.pm_storage_pool
-            size = var.pm_vm_disk_size
+          storage = var.pm_storage_pool
+          size    = var.pm_vm_disk_size
         }
       }
       scsi1 {
         cdrom {
-            iso = var.pm_iso_location
+          iso = var.pm_iso_location
         }
       }
     }
@@ -48,8 +48,8 @@ resource "proxmox_vm_qemu" "workers" {
   skip_ipv6   = true
 
   network {
-    id = 0
-    model = "e1000"
+    id     = 0
+    model  = "e1000"
     bridge = var.pm_network_bridge
   }
 
@@ -57,13 +57,13 @@ resource "proxmox_vm_qemu" "workers" {
     scsi {
       scsi0 {
         disk {
-            storage = var.pm_storage_pool
-            size = var.pm_vm_disk_size
+          storage = var.pm_storage_pool
+          size    = var.pm_vm_disk_size
         }
       }
       scsi1 {
         cdrom {
-            iso = var.pm_iso_location
+          iso = var.pm_iso_location
         }
       }
     }

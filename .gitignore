@@ -40,3 +40,5 @@ terraform.rc
 # Ignore Talos and Kubernetes configs
 talosconfig
 kubeconfig
+
+.codegpt
